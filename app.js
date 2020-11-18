@@ -1,5 +1,5 @@
 
-export default function appScr(express, bodyParser, fs, crypto, http) {
+export default function appScr(express, bodyParser) {
     const app = express();
     const hu = {'Content-Type':'text/html; charset=utf-8'}
     const CORS = {
