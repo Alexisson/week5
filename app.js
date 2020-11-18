@@ -18,7 +18,7 @@ export default function appScr(express, bodyParser, fs, crypto, http) {
         })
         .all('/code/', (req, res) => {
             res.set(headers)
-            fs.readFile('./app.js',(err, data) => {
+            fs.readFile(import.meta.url.substring(7),(err, data) => {
                 if (err) throw err;
                 res.end(data);
               });           
